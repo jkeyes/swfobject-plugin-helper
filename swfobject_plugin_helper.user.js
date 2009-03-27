@@ -7,10 +7,8 @@
 // @include       http://www.vimeo.com/*
 // @include       http://vimeo.com/*
 // @include       http://qik.com/video/*
-// @version       1.0
+// @version       1.0.1
 // ==/UserScript==
-
-// Version 1 - March 22nd, 2009
 
 // This function was copied from http://kb.mozillazine.org/XPath
 // Evaluate an XPath expression aExpression against a given DOM node
@@ -143,7 +141,21 @@ function check_qik() {
 	}
 }
 
+function check_12seconds() {
+	url = parseUri(location.href);
+	qik_re = /.*(12seconds\.tv)$/;
+	m = qik_re.exec(url.host);
+	if (m) {
+		video_re = /^.*\/(\d+)$/;
+		m = video_re.exec(url.path);
+		if (m) {
+			video_id = m[1];
+			add_code("12seconds", video_id, 430, 360);
+		}
+	}
+}
+
 check_youtube();
 check_vimeo();
 check_qik();
-
+check_12seconds();
