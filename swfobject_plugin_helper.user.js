@@ -7,6 +7,7 @@
 // @include       http://www.vimeo.com/*
 // @include       http://vimeo.com/*
 // @include       http://qik.com/video/*
+// @include       http://12seconds.tv/*
 // @version       1.0.1
 // ==/UserScript==
 
