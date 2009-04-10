@@ -4,6 +4,8 @@
 // @description Copies SWFObject code for the current video page to the clipboard.
 // @include http://youtube.com/watch?*
 // @include http://www.youtube.com/watch?*
+// @include http://www.viddler.com/*
+// @include http://viddler.com/*
 // @include http://www.vimeo.com/*
 // @include http://vimeo.com/*
 // @include http://qik.com/video/*
